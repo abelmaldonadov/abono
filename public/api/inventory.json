@@ -1,0 +1,10 @@
+{
+  "inventory": [
+    {"code":"001", "name":"Planta 1", "price":"10.00", "pictureUrl":"pictures/picture1.jpg", "category":"suculentas", "stock":3},
+    {"code":"002", "name":"Planta 2", "price":"20.00", "pictureUrl":"pictures/picture2.jpg", "category":"suculentas", "stock":6},
+    {"code":"003", "name":"Planta 3", "price":"30.00", "pictureUrl":"pictures/picture3.jpg", "category":"suculentas", "stock":2},
+    {"code":"004", "name":"Planta 4", "price":"10.00", "pictureUrl":"pictures/picture4.jpg", "category":"cactus", "stock":7},
+    {"code":"005", "name":"Planta 5", "price":"20.00", "pictureUrl":"pictures/picture5.jpg", "category":"cactus", "stock":1},
+    {"code":"006", "name":"Planta 6", "price":"30.00", "pictureUrl":"pictures/picture6.jpg", "category":"cactus", "stock":4}
+  ]
+}

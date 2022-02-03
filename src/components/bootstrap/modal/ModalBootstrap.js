@@ -1,6 +1,5 @@
 import React from 'react'
 import {Button, Col, Modal, Row} from "react-bootstrap";
-import NewSection from "../cards/new-section.jpg"
 import Counter from "../../counter/Counter";
 
 export default class ModalBootstrap extends React.Component {
@@ -41,7 +40,7 @@ export default class ModalBootstrap extends React.Component {
     render() {
         const {modalShow, numItems} = this.state
         const {item} = this.props
-        const {price, name, stock} = item
+        const {price, name, stock, pictureUrl} = item
         const subtotal = parseFloat(numItems * price).toFixed(2)
         return <>
             <Button variant="success" onClick={this.setModalShow}>
@@ -71,7 +70,7 @@ export default class ModalBootstrap extends React.Component {
                             <Counter minusItem={this.minusItem} plusItem={this.plusItem} numItems={numItems} />
                         </Col>
                         <Col>
-                            <img src={NewSection} className="w-100"/>
+                            <img src={pictureUrl} className="w-100" alt="..."/>
                         </Col>
                     </Row>
                 </Modal.Body>

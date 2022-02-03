@@ -1,6 +1,5 @@
 import React from 'react'
 import {Card, Col, Row} from "react-bootstrap";
-import NewSection from "./new-section.jpg"
 import ModalBootstrap from "../modal/ModalBootstrap";
 
 export default class CardSmallBootstrap extends React.Component {
@@ -8,7 +7,7 @@ export default class CardSmallBootstrap extends React.Component {
         const {item} = this.props
         return <>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={ NewSection } />
+                <Card.Img variant="top" src={ item.pictureUrl } />
                 <Card.Body>
                     <Card.Title>{ item.name }</Card.Title>
                     <Card.Text>

@@ -1,15 +1,21 @@
-import { Navbar, Container, Nav } from 'react-bootstrap';
+import {Navbar, Container, Nav} from 'react-bootstrap';
+import {Link, NavLink} from "react-router-dom";
 
 export default function NavBarBootstrap(props) {
-    return <Navbar bg="light" expand="lg">
+    return <Navbar bg="white" expand="lg">
         <Container>
-            <Navbar.Brand href="#home">Abono</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <div href="#home">
+                <Link to="/">Abono</Link>
+            </div>
+            <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-                {/*<Nav.Link href="#home">Inicio</Nav.Link>*/}
-                {/*<Nav.Link href="#saved">Guardado</Nav.Link>*/}
-                <Nav.Link href="#login">Ingresar</Nav.Link>
+                <div href="#saved">
+                    <NavLink to="/category">Category</NavLink>
+                </div>
+                <div>
+                    <NavLink to="/login">Ingresar</NavLink>
+                </div>
             </Nav>
             </Navbar.Collapse>
         </Container>
