@@ -1,17 +1,17 @@
 import React from 'react'
 import {Tab, Tabs} from "react-bootstrap";
-import CardSmallBootstrap from "../cards/CardSmallBootstrap"
+import CardBootstrap from "../cards/CardBootstrap"
 
-export default function TabsBootstrap({inventory}) {
+export default function TabsBootstrap({inventory, category}) {
     const listOutstanding = inventory.map(item => {
         if (item.stock > 5) {
-            return <CardSmallBootstrap key={item.code} item={item}/>
+            return <CardBootstrap key={item.code} item={item}/>
         } else return null
     })
 
     const listCategory = category => inventory.map(item => {
         if (item.category === category) {
-             return <CardSmallBootstrap key={item.code} item={item}/>
+             return <CardBootstrap key={item.code} item={item}/>
         } else return null
     })
 

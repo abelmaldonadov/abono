@@ -1,30 +1,25 @@
-import React, {useEffect, useState} from 'react'
+import {useParams} from "react-router-dom";
+import React from "react";
+import CardBootstrap from "../bootstrap/cards/CardBootstrap";
+import './grid.css'
 import {Container} from "react-bootstrap";
-import TabsBootstrap from "../bootstrap/tabs/TabsBootstrap";
 
-export default function Grid({setLoading}) {
-    const [products, setProducts] = useState([])
 
-    useEffect(() => {
-        setTimeout(() => {
-            getInventory()
-        }, 2000)
-    }, []);
+export default function Grid({products}) {
+    const {category} = useParams()
 
-    const getInventory = async () => {
-        try {
-            const response = await fetch('/api/inventory.json')
-            const data = await response.json()
-            console.log(products)
-            setProducts(data.inventory)
-        } catch(error) {
-            console.log(error)
-        } finally {
-            setLoading(false)
-        }
-    }
+    const listCategory = products.map(item => {
+        if (category === undefined) {
+            return <CardBootstrap key={item.code} item={item}/>
+        } else if (item.category === category) {
+            return <CardBootstrap key={item.code} item={item}/>
+        } else return null
+    })
 
-    return <Container fluid="md" className="mt-5">
-        <TabsBootstrap inventory={products}/>
+    return <Container>
+        <p className="text-muted text-center py-4">Catálogo</p>
+        <div className="grid">
+            {listCategory}
+        </div>
     </Container>
 }

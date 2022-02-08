@@ -62,9 +62,7 @@ export default class ModalBootstrap extends React.Component {
                 <Modal.Body>
                     <Row>
                         <Col>
-                            <p>Cras mattis consectetur purus sit amet fermentum.
-                                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus,
-                                porta ac consectetur ac, vestibulum at eros.</p>
+                            <p>{ item.description }</p>
                             <p className="fw-bold">Precio: ${ price }</p>
                             <p>Stock: { stock }</p>
                             <Counter minusItem={this.minusItem} plusItem={this.plusItem} numItems={numItems} />
