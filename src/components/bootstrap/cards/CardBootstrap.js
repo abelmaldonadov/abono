@@ -1,7 +1,7 @@
 import {Card, Col, Row} from "react-bootstrap";
 import ModalBootstrap from "../modal/ModalBootstrap";
 
-export default function CardBootstrap({item}) {
+function CardBootstrap({ item }) {
     return <Card>
         <Card.Img variant="top" src={ item.pictureUrl } />
         <Card.Body>
@@ -21,3 +21,5 @@ export default function CardBootstrap({item}) {
         </Card.Body>
     </Card>
 }
+
+export default CardBootstrap

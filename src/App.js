@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Routes from "./routes/Routes";
 import {useEffect, useState} from "react";
+import {CartContextComponent} from "./context/CartContext";
 
 export default function App() {
     const [products, setProducts] = useState([])
@@ -22,5 +23,7 @@ export default function App() {
         }, 1000)
     }, [])
 
-    return <Routes products={products}></Routes>
+    return <CartContextComponent>
+        <Routes products={products}></Routes>
+    </CartContextComponent>
 }
